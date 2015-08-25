@@ -1,33 +1,35 @@
 var path = require('path');
-var webpackUMDExternal = require('webpack-umd-external');
+var webpack = require('webpack');
 
 
 module.exports = {
   devtool: 'source-map',
   resolve: {
-    modulesDirectories: ['src/js', 'node_modules'],
+    modulesDirectories: ['src', 'node_modules'],
     extensions: ['', '.es6', '.js']
   },
-  entry: {
-    'app': './src/js/index.es6'
-  },
+  entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    path.join(__dirname, 'src')
+  ],
   output: {
-    path: path.resolve(__dirname, './dist/'),
-    filename: '[name].js',
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/static/',
+    filename: 'app.js',
     library: 'app',
     libraryTarget: 'umd'
   },
-  externals: webpackUMDExternal({
-    'reflux': 'Reflux',
-    'react': 'React',
-    'react-router': 'ReactRouter'
-  }),
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   module: {
     loaders: [
       {
         test: /\.es6$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader'
+        include: path.join(__dirname, 'src'),
+        loaders: ['react-hot', 'babel']
       }
     ]
   }
