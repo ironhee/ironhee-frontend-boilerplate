@@ -35,11 +35,12 @@
     "webpack-gulp-logger": "0.0.1"
   },
   "dependencies": {
+    "immutable": "^3.7.4",
     "lodash": "^3.10.1",
     "node-uuid": "^1.4.3",
     "react": "^0.13.3",
     "react-redux": "^1.0.0",
-    "react-router": "^1.0.0-beta3",
+    "react-router": "1.0.0-beta3",
     "redux": "^1.0.1",
     "reselect": "0.0.2"
   }
