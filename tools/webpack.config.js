@@ -8,6 +8,7 @@ export default {
     modulesDirectories: [
       path.join(__dirname, '../src'),
       path.join(__dirname, '../node_modules'),
+      path.join(__dirname, '../bower_components'),
     ],
     extensions: ['', '.es6', '.js'],
   },
@@ -34,6 +35,10 @@ export default {
       {
         test: /\.scss$/,
         loaders: ['style/useable', 'css', 'postcss', 'sass?sourceMap'],
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style/useable', 'css', 'postcss'],
       },
     ],
   },
