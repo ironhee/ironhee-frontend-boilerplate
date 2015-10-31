@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 
 import todoSelector from 'selectors/todo';
 import { addTodo, completeTodo, setVisibilityFilter } from 'actions/todo';
-import AddTodo from './AddTodo';
-import TodoList from './TodoList';
-import Footer from './Footer';
+import AddTodo from 'components/AddTodo';
+import TodoList from 'components/TodoList';
+import Footer from 'components/Footer';
 
 
 @connect(todoSelector)

@@ -1,0 +1,5 @@
+{
+  "name": "TodoApp",
+  "private": true,
+  "main": "./TodoApp.js"
+}

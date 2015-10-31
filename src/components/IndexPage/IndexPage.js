@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import TodoApp from 'components/todo/TodoApp';
+import TodoApp from 'components/TodoApp';
 
 
-export default class IndexSite extends Component {
-
+export default class IndexPage extends Component {
   render() {
     return (
       <div>
@@ -12,5 +11,4 @@ export default class IndexSite extends Component {
       </div>
     );
   }
-
 }

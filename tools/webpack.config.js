@@ -27,9 +27,14 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.es6$/,
+        test: /\.(js|es6)$/,
         include: path.join(__dirname, '../src'),
         loaders: ['react-hot', 'babel'],
+      },
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, '../src'),
+        loader: 'style!css!sass',
       },
     ],
   },

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
-import Todo from './Todo';
+import Todo from 'components/Todo';
 
 
 export default class TodoList extends Component {
