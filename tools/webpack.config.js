@@ -6,13 +6,13 @@ export default {
   devtool: 'source-map',
   resolve: {
     modulesDirectories: [
-      path.join(__dirname, '../src/js'),
+      path.join(__dirname, '../src'),
       path.join(__dirname, '../node_modules'),
     ],
     extensions: ['', '.es6', '.js'],
   },
   entry: {
-    app: [path.join(__dirname, '../src/js')],
+    app: [path.join(__dirname, '../src')],
   },
   output: {
     path: path.join(__dirname, '../dist'),
@@ -28,7 +28,7 @@ export default {
     loaders: [
       {
         test: /\.es6$/,
-        include: path.join(__dirname, '../src/js'),
+        include: path.join(__dirname, '../src'),
         loaders: ['react-hot', 'babel'],
       },
     ],

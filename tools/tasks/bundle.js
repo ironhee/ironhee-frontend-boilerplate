@@ -39,7 +39,7 @@ function bundle() {
 
     if (global.WATCH) {
       const server = new WebpackDevServer(bundler, {
-        contentBase: path.resolve(__dirname, '../../src/static'),
+        contentBase: path.resolve(__dirname, '../../static'),
         publicPath: '/static/',
         hot: true,
         stats: webpackStats,
