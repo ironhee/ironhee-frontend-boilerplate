@@ -5,13 +5,13 @@ import watch from '../lib/watch';
 const ncp = promisify(_ncp);
 
 async function copy() {
-  await ncp('src/static/', 'dist/');
+  await ncp('static/', 'dist/');
 
   if (global.WATCH) {
-    const watcher = await watch('src/static/**/*.*');
+    const watcher = await watch('static/**/*.*');
     watcher.on('changed', async (file) => {
-      const relPath = file.substr(path.join(__dirname, '../src/static/').length);
-      await ncp(`src/static/${relPath}`, `dist/${relPath}`);
+      const relPath = file.substr(path.join(__dirname, '../static/').length);
+      await ncp(`static/${relPath}`, `dist/${relPath}`);
     });
   }
 }

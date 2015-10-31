@@ -6,7 +6,8 @@
   },
   "scripts": {
     "build": "$(npm bin)/babel-node tools/run.js build",
-    "serve": "$(npm bin)/babel-node tools/run.js serve"
+    "serve": "$(npm bin)/babel-node tools/run.js serve",
+    "deploy": "tools/deploy.sh"
   },
   "devDependencies": {
     "babel": "^5.8.29",
