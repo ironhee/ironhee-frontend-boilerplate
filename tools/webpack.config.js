@@ -16,7 +16,7 @@ export default {
     app: [path.join(__dirname, '../src')],
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../dist/static/'),
     filename: 'app.js',
     library: 'app',
     libraryTarget: 'umd',

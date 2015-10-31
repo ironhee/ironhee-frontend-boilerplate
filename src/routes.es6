@@ -5,6 +5,6 @@ import IndexPage from 'components/IndexPage';
 
 export default (
   <Route component={ App }>
-    <Route name="index" path="/" component={ IndexPage }/>
+    <Route name="index" path="*" component={ IndexPage }/>
   </Route>
 );
