@@ -14,4 +14,4 @@
 
 - build: ```npm run build```
 - develop: ```npm run serve```
-- deploy: customize [tools/deploy.sh](./tools/deploy) and ```npm run deploy```
+- deploy: customize __tools/deploy.sh__ and ```npm run deploy```
