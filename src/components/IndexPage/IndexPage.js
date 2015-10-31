@@ -5,7 +5,7 @@ import TodoApp from 'components/TodoApp';
 export default class IndexPage extends Component {
   render() {
     return (
-      <div>
+      <div className="IndexPage">
         <h1>Hello World!</h1>
         <TodoApp />
       </div>

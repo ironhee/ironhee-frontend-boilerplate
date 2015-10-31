@@ -33,9 +33,11 @@ export default {
       },
       {
         test: /\.scss$/,
-        include: path.join(__dirname, '../src'),
-        loader: 'style!css!sass',
+        loaders: ['style/useable', 'css', 'postcss', 'sass?sourceMap'],
       },
     ],
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, '../src')],
   },
 };
