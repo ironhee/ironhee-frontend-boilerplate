@@ -8,7 +8,7 @@ const { SHOW_ALL } = VisibilityFilters;
 const TodoRecord = new Record({
   id: null,
   text: 'A brand new thing to do!',
-  completed: false
+  completed: false,
 });
 
 
@@ -29,12 +29,12 @@ function todos(state = new OrderedMap(), action) {
     id = uuid.v4();
     return state.set(id, new TodoRecord({
       id: id,
-      text: action.text
+      text: action.text,
     }));
   case COMPLETE_TODO:
     id = action.id;
     return state.set(action.id, state.get(action.id).merge({
-      completed: true
+      completed: true,
     }));
   default:
     return state;
@@ -43,7 +43,7 @@ function todos(state = new OrderedMap(), action) {
 
 const todoApp = combineReducers({
   visibilityFilter,
-  todos
+  todos,
 });
 
 export default todoApp;

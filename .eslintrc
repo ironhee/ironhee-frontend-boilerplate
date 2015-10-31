@@ -7,7 +7,9 @@
   },
   "rules": {
     "no-var": 0,
+    "id-length": 0,
     "prefer-const": 0,
-    "func-names": 0
+    "func-names": 0,
+    "react/prop-types": 0
   }
 }

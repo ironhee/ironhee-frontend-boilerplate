@@ -36,13 +36,14 @@ export default class TodoApp extends Component {
 }
 
 TodoApp.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
+    completed: PropTypes.bool.isRequired,
   })),
   visibilityFilter: PropTypes.oneOf([
     'SHOW_ALL',
     'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
+    'SHOW_ACTIVE',
+  ]).isRequired,
 };

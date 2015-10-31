@@ -26,7 +26,7 @@ gulp.task('watch', function() {
     publicPath: webpackConfig.output.publicPath,
     hot: true,
     stats: { colors: true },
-    historyApiFallback: true
+    historyApiFallback: true,
   });
   server.listen(3000, 'localhost', function(err) {
     if (err) { console.log(err); }
@@ -42,6 +42,3 @@ gulp.task('clean', function() {
   return gulp.src('dist')
     .pipe(vinylPaths(del));
 });
-
-
-module.exports = gulp.tasks;

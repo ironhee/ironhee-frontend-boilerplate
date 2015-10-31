@@ -4,7 +4,7 @@ import todo from 'reducers/todo';
 
 const store = createStore(
   combineReducers({
-    todo
+    todo,
   })
 );
 

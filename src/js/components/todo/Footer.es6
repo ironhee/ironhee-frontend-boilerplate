@@ -8,7 +8,7 @@ export default class Footer extends Component {
     }
 
     return (
-      <a href='#' onClick={e => {
+      <a href="#" onClick={e => {
         e.preventDefault();
         this.props.onFilterChange(filter);
       }}>
@@ -38,6 +38,6 @@ Footer.propTypes = {
   filter: PropTypes.oneOf([
     'SHOW_ALL',
     'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
+    'SHOW_ACTIVE',
+  ]).isRequired,
 };
