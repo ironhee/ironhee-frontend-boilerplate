@@ -1,5 +1,5 @@
 #!/bin/bash
-NODE_ENV=production npm run build
+npm run build -- --release
 (
 cd dist
 git init

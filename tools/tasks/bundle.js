@@ -3,20 +3,6 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from '../webpack.config';
 
-const DEBUG = !process.argv.includes('--release');
-const VERBOSE = process.argv.includes('--verbose');
-const webpackStats = {
-  colors: true,
-  reasons: DEBUG,
-  hash: VERBOSE,
-  version: VERBOSE,
-  timings: true,
-  chunks: VERBOSE,
-  chunkModules: VERBOSE,
-  cached: VERBOSE,
-  cachedAssets: VERBOSE,
-};
-
 
 function bundle() {
   return new Promise((resolve, reject) => {
@@ -24,15 +10,8 @@ function bundle() {
       if (err) {
         return reject(err);
       }
-      console.log(stats.toString(webpackStats));
+      console.log(stats.toString(webpackConfig.stats));
       return resolve();
-    }
-
-    if (global.WATCH) {
-      webpackConfig.entry.app.unshift(
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/dev-server',
-      );
     }
 
     const bundler = webpack(webpackConfig);
@@ -42,7 +21,7 @@ function bundle() {
         contentBase: path.resolve(__dirname, '../../static'),
         publicPath: '/static/',
         hot: true,
-        stats: webpackStats,
+        stats: webpackConfig.stats,
         historyApiFallback: true,
       });
       server.listen(3000, 'localhost', function(err) {
