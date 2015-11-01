@@ -1,0 +1,6 @@
+{
+  "name": "ironhee-frontend-boilerplate",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}

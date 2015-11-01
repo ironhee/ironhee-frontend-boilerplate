@@ -101,6 +101,9 @@ export default {
     ],
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, '../src')],
+    includePaths: [
+      path.resolve(__dirname, '../src'),
+      path.resolve(__dirname, '../bower_components/foundation/scss'),
+    ],
   },
 };
