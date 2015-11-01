@@ -5,6 +5,7 @@
     "npm": ">=3.1 <4"
   },
   "scripts": {
+    "init": "npm install; gem install foundation; cd vendors/foundation; foundation update; grunt build; cd -",
     "build": "$(npm bin)/babel-node tools/run.js build",
     "serve": "$(npm bin)/babel-node tools/run.js serve",
     "deploy": "tools/deploy.sh"
