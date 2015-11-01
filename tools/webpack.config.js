@@ -34,7 +34,7 @@ export default {
     modulesDirectories: [
       path.join(__dirname, '../src'),
       path.join(__dirname, '../node_modules'),
-      path.join(__dirname, '../bower_components'),
+      path.join(__dirname, '../vendors'),
     ],
     extensions: ['', '.es6', '.js'],
   },

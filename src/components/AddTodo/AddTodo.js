@@ -10,11 +10,26 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <div>
-        <input type="text" ref="input" />
-        <button onClick={e => this.handleClick(e)}>
-          Add
-        </button>
+      <div className="row">
+        <div className="large-12 columns">
+          <div className="row collapse">
+            <div className="small-10 columns">
+              <input
+                type="text"
+                ref="input"
+                placeholder="Add Todo"
+              />
+            </div>
+            <div className="small-2 columns">
+              <button
+                className="button postfix"
+                onClick={e => this.handleClick(e)}
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

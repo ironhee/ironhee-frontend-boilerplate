@@ -5,7 +5,7 @@ import todoSelector from 'selectors/todo';
 import { addTodo, completeTodo, setVisibilityFilter } from 'actions/todo';
 import AddTodo from 'components/AddTodo';
 import TodoList from 'components/TodoList';
-import Footer from 'components/Footer';
+import TodoFooter from 'components/TodoFooter';
 
 
 @connect(todoSelector)
@@ -15,6 +15,7 @@ export default class TodoApp extends Component {
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
+        <h1 className="text-center">Todo</h1>
         <AddTodo
           onAddClick={text =>
             dispatch(addTodo(text))
@@ -24,7 +25,7 @@ export default class TodoApp extends Component {
           onTodoClick={index =>
             dispatch(completeTodo(index))
           } />
-        <Footer
+        <TodoFooter
           filter={visibilityFilter}
           onFilterChange={nextFilter =>
             dispatch(setVisibilityFilter(nextFilter))
