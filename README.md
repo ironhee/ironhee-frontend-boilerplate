@@ -9,6 +9,7 @@
 - build: webpack
 - lint: eslint
 - source: ES6 & React & React-Router & Redux & React-Redux & Reselect & Immutable
+- Style: SASS
 - UI: Foundation
 
 # Usage
