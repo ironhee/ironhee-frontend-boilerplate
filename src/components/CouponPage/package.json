@@ -1,0 +1,5 @@
+{
+  "name": "CouponPage",
+  "private": true,
+  "main": "./CouponPage.js"
+}

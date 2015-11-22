@@ -16,6 +16,9 @@ export default class TopBar extends Component {
             <li>
               <Link to="/todo">Todo</Link>
             </li>
+            <li>
+              <Link to="/coupon">Coupon</Link>
+            </li>
           </ul>
         </section>
       </nav>
